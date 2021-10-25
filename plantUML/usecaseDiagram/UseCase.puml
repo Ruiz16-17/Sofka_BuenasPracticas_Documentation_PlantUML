@@ -1,0 +1,21 @@
+@startuml
+left to right direction
+actor Guest as g
+actor LogginGuest as lg
+package Question {
+  usecase "Create question" as CQ
+  usecase "Delete question" as DQ
+  usecase "Create answer" as CA
+  usecase "Delete answer" as DA
+  usecase "Read questions" as RQ
+  usecase "Read answer" as RA
+}
+lg --> CQ
+lg --> DQ
+lg --> CA
+lg --> DA
+lg --> RA
+lg --> RQ
+g --> RA
+g --> RQ
+@enduml

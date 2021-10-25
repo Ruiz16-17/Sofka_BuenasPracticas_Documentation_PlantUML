@@ -1,0 +1,19 @@
+@startuml
+
+actor LoggingGuest
+boundary Foo2
+control Foo3
+entity Foo4
+database Foo5
+collections Foo6
+LoggingGuest -> Foo2 : To boundary
+Foo2 -> Foo3 : To control
+Foo3 -> Foo4 : To entity
+Foo4 -> Foo5 : To database
+Foo5 -> Foo6 : To collections
+Foo2 --> LoggingGuest : To boundary
+Foo3 --> Foo2 : To control
+Foo4 --> Foo3 : To entity
+Foo5 --> Foo4 : To database
+Foo6 --> Foo5 : To collections
+@enduml
